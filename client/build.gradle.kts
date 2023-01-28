@@ -36,6 +36,10 @@ publishing {
     }
     publications {
         create<MavenPublication>("maven") {
+            groupId = "grpc-with-kotlin"
+            artifactId = "grpc-client"
+            version = "0.0.1"
+
             from(components["java"])
         }
     }
