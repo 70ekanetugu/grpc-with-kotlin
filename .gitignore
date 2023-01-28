@@ -21,3 +21,16 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# intelij
+.idea/
+
+# gradle
+.gradle/
+
+# 鍵関係
+stub/src/main/resources/ca/
+server/src/main/resources/
+client/src/main/resources/ca/
+
+build/
