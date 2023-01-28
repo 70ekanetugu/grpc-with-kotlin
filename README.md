@@ -14,7 +14,7 @@ Gradleのマルチプロジェクト構成で、KotlinによるgRPCサーバー�
 grpc-kotlin
 |-- client ：gRPCのクライアント実装。stubサブプロジェクトに依存。
 |  |-- src/main
-|  |   |-- kotlin ： 組み込みNettyで実装
+|  |   |-- kotlin ： Android以外を想定しているためgrpc-netty-shadedを使用。Android対応する場合はokhttpで実装が必要？
 |  |   `-- resources ：独自CA証明書を置いている
 |  `-- build.gradle.kts
 |
