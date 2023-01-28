@@ -4,7 +4,6 @@ plugins {
     id("maven-publish")
 }
 
-
 version = "0.0.1-SNAPSHOT"
 
 repositories {
@@ -18,6 +17,10 @@ dependencies {
 
 application {
     mainClass.set("com.example.client.HelloClientKt")
+}
+
+tasks.jar {
+    archiveBaseName.set("grpc-client")
 }
 
 publishing {
