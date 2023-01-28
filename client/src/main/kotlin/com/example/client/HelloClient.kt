@@ -4,6 +4,7 @@ import com.example.hello.GreeterGrpcKt
 import com.example.hello.helloRequest
 import io.grpc.Grpc
 import io.grpc.ManagedChannel
+import io.grpc.ManagedChannelBuilder
 import io.grpc.TlsChannelCredentials
 import java.util.concurrent.TimeUnit
 
@@ -30,7 +31,7 @@ suspend fun main() {
     ).build()
 //    val channel = ManagedChannelBuilder
 //        .forAddress("127.0.0.1", 8443)
-//        .useTransportSecurity()
+//        .usePlaintext() SSL使わないならこれでも良いがせいぜいテスト用の場合のみ
 //        .build()
     val client = HelloClient(channel)
     client.sayHello("kanetugu")
