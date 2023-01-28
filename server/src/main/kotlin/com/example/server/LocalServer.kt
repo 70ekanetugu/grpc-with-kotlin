@@ -3,6 +3,7 @@ package com.example.server
 import com.example.hello.*
 import io.grpc.Server
 import io.grpc.ServerBuilder
+
 class LocalServer(private val port: Int = 50051) {
     private val server: Server = ServerBuilder
         .forPort(port)
